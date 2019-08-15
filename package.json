@@ -1,0 +1,27 @@
+{
+  "name": "airbnb-clone-css-only",
+  "version": "1.0.0",
+  "description": "This is a no-css PSD-to-HTML Airbnb.com Clone",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "PSD",
+    "HTML",
+    "Airbnb",
+    "CSS"
+  ],
+  "author": "Adeyemi Babalola (@boasbabs)",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-livereload": "^4.0.1",
+    "gulp-surge": "^0.1.3",
+    "st": "^1.2.2"
+  },
+  "dependencies": {
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-uglifycss": "^1.1.0"
+  }
+}
