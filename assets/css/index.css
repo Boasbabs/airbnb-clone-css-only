@@ -162,6 +162,7 @@ body {
   font: 300 16px/22px "Montserrat", "Roboto", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
   font-weight: normal;
+  position: relative;
 }
 
 h1,
@@ -195,21 +196,51 @@ textarea {
 
 header {
   height: 100vh;
-
-  min-height: 650px !important;
+  min-height: 680px !important;
   width: 100%;
+  position: relative;
+  margin-bottom: 10%;
+}
+
+.header-bg {
   background-image: url("/assets/images/bkground.jpg");
   background-color: #767676;
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;
-  /* grid-template-columns: repeat(12, 1fr); */
-  grid-template-rows: 80px auto;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 80px auto 22%;
 }
-menu {
+
+.side-text {
+  text-align: right;
+  padding: 24px;
+  z-index: 3;
+  font-weight: 600;
+  grid-column: 8 / span 4;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .side-text {
+    padding: 12px;
+    margin: 1em 0;
+    grid-column: 4 / span 8;
+    color: #ffffff;
+  }
+}
+
+.site-logo {
+  order: 0;
+  height: 34px;
+  width: 34px;
+}
+
+.menu {
   display: flex;
   justify-content: space-between;
   align-content: center;
+  grid-column: 1 / -1;
   height: 80px;
   padding: 24px;
   font-weight: 600;
@@ -235,16 +266,9 @@ menu {
   font-size: 14px;
 }
 
-.site-logo {
-  order: 0;
-  height: 34px;
-  width: 34px;
-}
-
 .header-form--section {
-  padding: 0 80px;
   padding-top: 40px;
-  /* z-index: 1; */
+  grid-column: 2 / span 8;
 }
 
 .header-form {
@@ -254,7 +278,7 @@ menu {
   margin-left: 23px;
   padding: 32px;
   padding-bottom: 24px;
-  width: 441px;
+  max-width: 441px;
   height: 100%;
 }
 .header-form > h2 {
@@ -290,8 +314,9 @@ menu {
   position: relative;
 }
 
- #check-in, #check-out {
-  display: inline;  
+#check-in,
+#check-out {
+  display: inline;
 }
 .header-form .button-section {
   display: flex;
@@ -306,7 +331,6 @@ menu {
   width: auto;
   border-radius: 4px;
   font-size: 16px;
-  line-height: 24px;
   font-weight: 700;
   border-width: 2px;
   border-style: solid;
