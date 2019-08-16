@@ -5,16 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Airbnb Clone</title>
-    <link rel="shortcut icon" sizes="76x76" type="image/x-icon" href="/assets/images/airbnb.ico" />
+    <link
+      rel="shortcut icon"
+      sizes="76x76"
+      type="image/x-icon"
+      href="/assets/images/airbnb.ico"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/assets/css/index.css" />
   </head>
   <body>
     <header>
       <menu>
-          <div class="site-logo">
-              <img src="/assets/images/airbnb-1.svg" alt="Airbnb logo image" />
-          </div>
-        <nav>
+        <div class="site-logo">
+          <img src="/assets/images/airbnb-1.svg" alt="Airbnb logo image" />
+        </div>
+        <nav class="navigation">
           <ul>
             <li><a href="#">Host a home</a></li>
             <li><a href="#">Host an experience</a></li>
@@ -24,8 +33,8 @@
           </ul>
         </nav>
       </menu>
-      <div>
-        <form action="#">
+      <div class="header-form--section">
+        <form action="#" class="header-form">
           <h2>Book unique places to stay and things to do.</h2>
           <label for="destination">where</label>
           <input
@@ -34,11 +43,15 @@
             id="destination"
             placeholder="Anywhere"
           />
-          <label for="check-in">check-in</label>
-          <input type="date" name="check-in" id="check-in" />
-          <label for="check-out">check-out</label>
-          <input type="date" name="check-out" id="check-out" />
+          <!-- <div class="checkin"> -->
 
+              <label for="check-in">check-in</label>
+              <input type="date" name="check-in" id="check-in" />
+              <label for="check-out">check-out</label>
+              <input type="date" name="check-out" id="check-out" />
+          <!-- </div> -->
+
+          <label for="guest">Guests</label>
           <select name="guest" id="guest" placeholder="Guests">
             <option value="1">1 Adult</option>
             <option value="2">2 Adults</option>
@@ -46,6 +59,9 @@
             <option value="4">4 Adults</option>
             <option value="5">5 Adults</option>
           </select>
+          <div class="button-section">
+            <button class="header-form--button" type="submit">Search</button>
+          </div>
         </form>
       </div>
     </header>

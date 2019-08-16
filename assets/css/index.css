@@ -2,19 +2,87 @@
   License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -23,24 +91,35 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 body {
   line-height: 1;
 }
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
-blockquote:before, 
-blockquote:after, 
-q:before, 
+blockquote:before,
+blockquote:after,
+q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 table {
@@ -48,6 +127,192 @@ table {
   border-spacing: 0;
 }
 
+/* 
+----------------
+Custom colors
+------------------
+
+colour scheme
+Rausch (pink) #F8585D
+Babu (teal) #00A699
+Arches (orange) #FC642D
+Hof (dark gray) #484848
+Foggy (light gray) #767676
+
+
+*/
+
+/* 
+-------------
+My Customs CSS
+-------------
+*/
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  color: #484848;
+  font: 300 16px/22px "Montserrat", "Roboto", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #484848;
+}
 h1 {
-    color: pink;
+  font-size: 36px;
+  line-height: 44px;
+}
+h2 {
+  font-size: 24px;
+  line-height: 44px;
+}
+
+h3 {
+  font-size: 21px;
+}
+h4 {
+  font-size: 18px;
+}
+
+input,
+select,
+textarea {
+  font: 300 16px/22px "Montserrat", "Roboto", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+}
+
+header {
+  height: 100vh;
+
+  min-height: 650px !important;
+  width: 100%;
+  background-image: url("/assets/images/bkground.jpg");
+  background-color: #767676;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  /* grid-template-columns: repeat(12, 1fr); */
+  grid-template-rows: 80px auto;
+}
+menu {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  height: 80px;
+  padding: 24px;
+  font-weight: 600;
+}
+
+.navigation li {
+  display: inline-block;
+  justify-content: flex-start;
+  order: 1;
+  margin: 0 8px;
+  vertical-align: top;
+}
+
+.navigation li a {
+  text-decoration: none;
+  color: #484848;
+  font-size: 14px;
+  height: 80px;
+}
+.navigation li a:hover {
+  padding-bottom: 24px;
+  border-bottom: 2px #fc642d solid;
+  font-size: 14px;
+}
+
+.site-logo {
+  order: 0;
+  height: 34px;
+  width: 34px;
+}
+
+.header-form--section {
+  padding: 0 80px;
+  padding-top: 40px;
+  /* z-index: 1; */
+}
+
+.header-form {
+  background: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+  margin-left: 23px;
+  padding: 32px;
+  padding-bottom: 24px;
+  width: 441px;
+  height: 100%;
+}
+.header-form > h2 {
+  font-weight: 700;
+  line-break: 36px;
+  font-size: 30px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.header-form > label {
+  cursor: pointer;
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: 8px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.header-form input,
+.header-form select,
+.header-form textarea {
+  padding-left: 12px;
+  padding-right: 12px;
+  border: 1px solid #ebebeb;
+  border-radius: 4px;
+  background-color: #ffffff;
+  display: flex !important;
+  height: 48px !important;
+  width: 100% !important;
+  align-items: center !important;
+  position: relative;
+}
+
+ #check-in, #check-out {
+  display: inline;  
+}
+.header-form .button-section {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px 0;
+}
+
+.header-form--button {
+  display: inline-block;
+  margin: 0px;
+  position: relative;
+  width: auto;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  border-width: 2px;
+  border-style: solid;
+  padding: 10px 22px;
+  min-width: 71px;
+  background: #ff5a5f;
+  border-color: transparent;
+  color: #ffffff;
 }
