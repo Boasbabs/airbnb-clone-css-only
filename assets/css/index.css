@@ -162,6 +162,7 @@ body {
   font: 300 16px/22px "Montserrat", "Roboto", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
   font-weight: normal;
+  position: relative;
 }
 
 h1,
@@ -188,28 +189,49 @@ h4 {
 
 input,
 select,
+option,
 textarea {
   font: 300 16px/22px "Montserrat", "Roboto", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
 }
 
-header {
-  height: 100vh;
+/*
+  ========================================
+  Explore section
+  ========================================
+*/
 
-  min-height: 650px !important;
+/* header {
+  height: 100vh;
+  min-height: 680px !important;
   width: 100%;
+  position: relative;
+} */
+
+.header-bg {
   background-image: url("/assets/images/bkground.jpg");
   background-color: #767676;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  min-height: 100vh;
+  width: 100%;
   display: grid;
-  /* grid-template-columns: repeat(12, 1fr); */
-  grid-template-rows: 80px auto;
+  grid-template-columns: 60px repeat(10, 1fr) 60px;
 }
-menu {
+
+.site-logo {
+  order: 0;
+  height: 34px;
+  width: 34px;
+}
+
+.menu {
   display: flex;
   justify-content: space-between;
   align-content: center;
+  grid-column: 1 / -1;
   height: 80px;
   padding: 24px;
   font-weight: 600;
@@ -235,26 +257,18 @@ menu {
   font-size: 14px;
 }
 
-.site-logo {
-  order: 0;
-  height: 34px;
-  width: 34px;
-}
-
 .header-form--section {
-  padding: 0 80px;
   padding-top: 40px;
-  /* z-index: 1; */
+  grid-column: 2 / span 10;
 }
 
 .header-form {
   background: #ffffff;
   border-radius: 4px;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
-  margin-left: 23px;
   padding: 32px;
   padding-bottom: 24px;
-  width: 441px;
+  max-width: 441px;
   height: 100%;
 }
 .header-form > h2 {
@@ -290,8 +304,9 @@ menu {
   position: relative;
 }
 
- #check-in, #check-out {
-  display: inline;  
+#check-in,
+#check-out {
+  display: inline;
 }
 .header-form .button-section {
   display: flex;
@@ -306,7 +321,6 @@ menu {
   width: auto;
   border-radius: 4px;
   font-size: 16px;
-  line-height: 24px;
   font-weight: 700;
   border-width: 2px;
   border-style: solid;
@@ -315,4 +329,200 @@ menu {
   background: #ff5a5f;
   border-color: transparent;
   color: #ffffff;
+}
+
+.side-text {
+  text-align: right;
+  padding: 24px;
+  z-index: 3;
+  font-weight: 600;
+  grid-column: 8 / span 4;
+}
+
+/*
+  ========================================
+  Explore section
+  ========================================
+*/
+
+main {
+  display: grid;
+  grid-template-columns: 60px 1fr 60px;
+  grid-template-rows: repeat(5, auto);
+}
+
+main > * {
+  grid-column: 2/3;
+  min-width: 0;
+}
+
+.explore {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-column-gap: 3rem;
+  grid-row-gap: 1rem;
+}
+
+.explore-cards {
+  display: flex;
+  align-content: center;
+  border: 1px solid #767676;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.explore-cards > img {
+  height: 72px;
+  width: 96px;
+}
+
+.explore-cards > h4 {
+  flex-grow: 1;
+  font-weight: 800;
+  font-size: 17px;
+  line-height: 24px;
+  padding: 14px 16px 10px;
+  padding: 0 20px;
+  align-self: center;
+}
+
+.explore-title,
+.recommendation-title {
+  grid-column: 1/-1;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 30px;
+  margin-top: 12px;
+  margin-bottom: 15px;
+}
+
+/*
+  ========================================
+  mini-hero section
+  ========================================
+*/
+
+.mini-hero {
+  display: grid;
+  grid-template-columns: 60px 1fr auto;
+  grid-template-rows: 52% 60px 10px;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  background-image: url("/assets/images/hero-image.jpg");
+  background-color: #767676;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  height: 350px;
+  width: 100%;
+}
+
+.mini-hero h3 {
+  font-size: 38px;
+  line-height: 44px;
+  font-weight: 400;
+  width: 600px;
+  color: #ffffff;
+}
+
+.hero-section-1,
+.hero-section-2 {
+  grid-column: 2/3;
+}
+.hero-section-1 {
+  align-self: center;
+  grid-row: 1 / 2;
+  padding-top: 2em;
+}
+.hero-section-2 {
+  grid-column: 2/3;
+  grid-row: 2 / 3;
+}
+.hero-section-3 {
+  grid-column: 1/2;
+  grid-row: 3 / -1;
+  justify-self: start;
+  align-self: start;
+  padding-top: 5em;
+}
+
+.mh-bold {
+  font-weight: 600;
+}
+.mini-hero--button-1 {
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  border: 2px solid transparent;
+  padding: 10px 22px;
+  width: 137px;
+  height: 48px;
+  background: #ffffff;
+  color: #767676;
+  display: block;
+}
+.mini-hero--button-2 {
+  grid-column: 1/2;
+  justify-self: start;
+  align-self: end;
+  background: transparent;
+  color: #ffffff;
+  border: none;
+}
+
+/*
+  ========================================
+  recommendation section
+  ========================================
+*/
+
+.recommendation {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-column-gap: 2px;
+  grid-row-gap: 1px;
+}
+
+.rec-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #767676;
+  /* grid-column: 1/-1; */
+  border-radius: 2px;
+  height: 281px;
+  width: 225px;
+  position: relative;
+}
+
+.rec-card > img {
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*
+  ========================================
+  Mobile Responsiveness
+  ========================================
+*/
+@media only screen and (max-width: 768px) {
+  .side-text {
+    padding: 12px;
+    margin: 1em 0;
+    grid-column: 4 / span 8;
+    color: #ffffff;
+  }
+  .hero-section-1 {
+    padding-top: 1em;
+  }
+  .mini-hero h3 {
+    font-size: 20px;
+    line-height: 22px;
+    width: 200px;
+  }
 }
