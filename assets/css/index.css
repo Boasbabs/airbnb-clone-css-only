@@ -485,6 +485,22 @@ main > * {
   grid-row-gap: 1px;
 }
 
+:root {
+  --gutter: 22px;
+}
+
+.rec-horizontal-scroll {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-gap: calc(var(--gutter) / 3);
+  grid-auto-flow: column;
+  grid-auto-columns: calc(23% - var(--gutter) * 2.2);
+  overflow-x: scroll;
+  scroll-snap-type: x proximity;
+  padding-bottom: calc(.75 * var(--gutter));
+  margin-bottom: calc(-.25 * var(--gutter));
+}
+
 .rec-card {
   display: flex;
   flex-direction: column;
