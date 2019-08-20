@@ -387,8 +387,7 @@ main > * {
   align-self: center;
 }
 
-.explore-title,
-.recommendation-title {
+.section-title {
   grid-column: 1/-1;
   font-weight: 800;
   font-size: 24px;
@@ -497,8 +496,15 @@ main > * {
   grid-auto-columns: calc(23% - var(--gutter) * 2.2);
   overflow-x: scroll;
   scroll-snap-type: x proximity;
-  padding-bottom: calc(.75 * var(--gutter));
-  margin-bottom: calc(-.25 * var(--gutter));
+  padding-bottom: calc(0.75 * var(--gutter));
+  margin-bottom: calc(-0.25 * var(--gutter));
+}
+
+.rec-card,
+.places-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 3px;
 }
 
 .rec-card {
@@ -555,13 +561,78 @@ main > * {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0.45)
-  );
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.45));
   border-radius: 3px;
 }
+/*
+  ========================================
+  Places section
+  ========================================
+*/
+
+.m-top-3 {
+  margin-top: 3em;
+}
+
+.m-top-3 > a {
+  text-decoration: none;
+  color: #484848;
+}
+
+.places {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(256px, 1fr));
+  grid-template-rows: 1fr auto auto;
+  grid-column-gap: 5px;
+  grid-row-gap: 1px;
+}
+.places-card{
+  padding: 8px 8px 12px;
+}
+
+.places-card--image > img {
+  height: 190px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+.places-card--subtitle {
+  font-size: 12px;
+  font-weight: 800;
+  color: #767676;
+  line-height: 16px;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+}
+
+.places-card--title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #484848;
+  line-height: 22px;
+  margin-top: 6px;
+}
+.places-card--details p, .places-card--more {
+  font-size: 14px;
+  font-weight: 400;
+  color: #484848;
+  line-height: 18px;
+  margin-bottom: 2px
+}
+
+.places-card--more {
+  line-height: 16px;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.places-card--details > div {
+font-size: 14px;
+line-height: 18px;
+margin-top: 4px;
+}
+
 /*
   ========================================
   Mobile Responsiveness
