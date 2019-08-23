@@ -143,3 +143,4 @@ yarn-error.log*
 
 .idea/
 .idea*
+.vscode/
