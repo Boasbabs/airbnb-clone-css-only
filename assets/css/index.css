@@ -582,7 +582,7 @@ main > * {
 
 .places {
   display: grid;
-  grid-template-columns: repeat(4, minmax(256px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
   grid-template-rows: 1fr auto auto;
   grid-column-gap: 5px;
   grid-row-gap: 1px;
@@ -698,7 +698,7 @@ footer {
   grid-column: 2/-2;
   padding-top: 20px;
   padding-bottom: 20px;
-
+  flex-wrap: wrap;
 }
 
 .footy-tagline {
@@ -710,15 +710,17 @@ footer {
 .footy-section-1 {
   display: inline-flex;
   align-self: center;
+  padding: 6px 0;
 }
 
 .footy-section-2 {
   grid-column: span 2/ -1;
   display: flex;
   font-weight: 600;
+  padding: 6px 0;
 }
 
-.footy-section-2  select {
+.footy-section-2 select {
   background-color: transparent;
   border: none;
   padding: 2px 2px;
@@ -729,7 +731,7 @@ footer {
   line-height: 18px;
   color: #484848;
 }
-.footy-section-2  option {
+.footy-section-2 option {
   padding: 2px 2px;
   font-weight: 600;
   font-size: 14px;
