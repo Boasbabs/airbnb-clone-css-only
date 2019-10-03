@@ -278,7 +278,7 @@ textarea {
   padding-top: 6px;
   padding-bottom: 6px;
 }
-.header-form > label {
+.header-form label {
   cursor: pointer;
   display: block;
   font-size: 12px;
@@ -286,6 +286,9 @@ textarea {
   letter-spacing: 1px;
   margin-top: 8px;
   margin-bottom: 6px;
+}
+
+.up-case {
   text-transform: uppercase;
 }
 
@@ -737,6 +740,50 @@ footer {
   font-size: 14px;
   line-height: 18px;
   color: #484848;
+}
+
+/*
+  ========================================
+  HOME Styles
+  ========================================
+*/
+
+.h-form-label--group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 5px;
+  margin: 8px 0;
+}
+
+.home-form {
+  display: grid;
+  justify-content: end;
+}
+
+.w-100 {
+  width: 100%;
+}
+.h-label {
+  font-size: 16px !important;
+  line-height: 22px !important;
+  font-weight: 600 !important;
+}
+.h-price-tag-section {
+  margin-top: 17px;
+  margin-bottom: 15px;
+}
+
+.h-price-tag {
+  line-height: 44px;
+  font-size: 40px;
+  font-weight: 800;
+  display: inline-block;
+}
+.h-price-permonth {
+  line-height: 1.2857142857142858em ;
+  font-size: 14px;
+  font-weight: 400;
+  display: inline-block;
 }
 
 /*

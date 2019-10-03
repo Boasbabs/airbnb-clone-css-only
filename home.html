@@ -4,10 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="keywords" content="HTML,CSS,Mockups,PSD,JavaScript, Airbnb Mockups">
-    <meta name="description" content="PSD to HTML/CSS of Airbnb using CSS only by Adeyemi Simeon |Twitter: @boasbabs">
-    <meta name="author" content="Adeyemi Simeon">
-    <title>Airbnb Clone - by Adeyemi Simeon</title>
+    <meta
+      name="keywords"
+      content="HTML,CSS,Mockups,PSD,JavaScript, Airbnb Mockups"
+    />
+    <meta
+      name="description"
+      content="PSD to HTML/CSS of Airbnb using CSS only by Adeyemi Simeon |Twitter: @boasbabs"
+    />
+    <meta name="author" content="Adeyemi Simeon" />
+    <title>Airbnb Clone Homes - by Adeyemi Simeon</title>
     <link
       rel="shortcut icon"
       sizes="76x76"
@@ -22,7 +28,64 @@
     <script src="https://kit.fontawesome.com/32cda76444.js"></script>
   </head>
   <body>
+    <header>
+      <div class="header-bg">
+        <div class="menu">
+          <div class="site-logo">
+            <img src="/assets/images/airbnb-1.svg" alt="Airbnb logo image" />
+          </div>
+          <nav class="navigation">
+            <ul>
+              <li><a href="home.html">Host a home</a></li>
+              <li><a href="#">Host an experience</a></li>
+              <li><a href="#">Help</a></li>
+              <li><a href="#">Sign up</a></li>
+              <li><a href="#">Log in</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header-form--section home-form">
+          <form action="#" class="header-form">
+            <h2>Earn money as an Airbnb host.</h2>
+            <label for="location" class="h-label"
+              >Find out what you could earn</label
+            >
+            <input
+              type="text"
+              name="location"
+              id="location"
+              placeholder="Lagos NG"
+            />
 
-    <h1>YES!!! REALLY??</h1>
+            <div class="h-form-label--group">
+              <select name="property" id="property" placeholder="property type">
+                <option value="1">Entire place</option>
+                <option value="2">Private room</option>
+                <option value="3">Shared room</option>
+              </select>
+              <select name="guest" id="guest" placeholder="No of Guest">
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+              </select>
+            </div>
+            <div class="h-price-tag-section">
+              <h3 class="h-price-tag">$1,200</h3>
+              <span class="h-price-permonth">per month</span>
+            </div>
+            <div class="button-section">
+              <button class="header-form--button w-100" type="submit">
+                Get started
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="side-text">
+          <p>&nbsp;</p>
+        </div>
+      </div>
+    </header>
   </body>
 </html>
