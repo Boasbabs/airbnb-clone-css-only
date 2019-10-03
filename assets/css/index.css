@@ -780,10 +780,101 @@ footer {
   display: inline-block;
 }
 .h-price-permonth {
-  line-height: 1.2857142857142858em ;
+  line-height: 1.2857142857142858em;
   font-size: 14px;
   font-weight: 400;
   display: inline-block;
+}
+
+.marketing-section {
+  display: flex;
+  justify-content: center;
+}
+.marketing-wrapper {
+  margin-left: -8px;
+  margin-right: -8px;
+  margin-bottom: 48px;
+  display: flex;
+  justify-content: center;
+  width: 1048px;
+}
+
+.marketing-subsection {
+  margin-top: 48px;
+  margin-left: 0px;
+  margin-right: 64px;
+}
+.marketing-header {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.25em;
+  color: #484848;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.marketing-body {
+  font-size: 16px;
+  font-weight: 400;
+  color: #484848;
+  margin-top: 16px;
+}
+
+.line {
+  width: 64px;
+  border: 1px solid #767676;
+  margin-bottom: 24px;
+}
+
+.line-section {
+  display: flex;
+  justify-content: center;
+}
+
+.marketing-details {
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-left: 64px;
+  padding-right: 64px;
+  /* text-align: center; */
+}
+.marketing-details__h2 {
+  font-size: 60px;
+  line-height: 64px;
+  letter-spacing: -2.5px;
+  font-weight: 700;
+  margin-bottom: 54px;
+  text-align: center;
+}
+.detail-svg {
+  margin-bottom: 16px;
+}
+
+.marketing-subdetail {
+  margin-right: 2em;
+}
+
+.marketing-details__wrapper {
+  width: 1048px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 2em;
+}
+
+.marketing-subdetail__header {
+  margin: 0px;
+  word-wrap: break-word;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.25em;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.marketing-subdetail__body {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 /*
