@@ -1,6 +1,6 @@
 ## Airbnb Clone (using CSS only)
 
-This mockup was inspired by [Airbnb](https://airbnb.com) .
+This mockup was inspired by [Airbnb](https://airbnb.com) at October 2019.
 
 
 #### Technology Used
@@ -18,6 +18,6 @@ I. Use [GulpJs](https://gulpjs.com) for running tasks (such as livereload, minif
 
 III. Static site deployed on [Surge](https:surge.sh)
 
-View site at [boasbabs-airbnb-clone.surge.sh](boasbabs-airbnb-clone.surge.sh)
+View site at [http://boasbabs-airbnb-clone.surge.sh/](http://boasbabs-airbnb-clone.surge.sh/)
 
 
