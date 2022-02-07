@@ -6,16 +6,13 @@ const surge = require("gulp-surge");
 const http = require("http");
 const st = require("st");
 
-// Task to minify HTML
-// TODO: Minify HTML
+
 gulp.task("html", function() {
   return (
     gulp
       .src("./src/*.html")
       .pipe(htmlmin({ collapseWhitespace: true }))
       .on("error", function(err) {
-        console.log(err.toString());
-
         this.emit("end");
       })
       // .pipe(gulp.dest('./'))
@@ -33,8 +30,6 @@ gulp.task("css", function() {
       })
     )
     .on("error", function(err) {
-      console.log(err.toString());
-
       this.emit("end");
     })
     .pipe(gulp.dest("build"))
@@ -44,8 +39,8 @@ gulp.task("css", function() {
 // Task to deploy to Surge
 gulp.task("deploy", [], function() {
   return surge({
-    project: "./", // Path to your static build directory
-    domain: "boasbabs-airbnb-clone.surge.sh" // Your domain or Surge subdomain
+    project: "./",
+    domain: "boasbabs-airbnb-clone.surge.sh" 
   });
 });
 
